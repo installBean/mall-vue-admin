@@ -1,8 +1,5 @@
 export default {
   development: {
-    baseUrl: '/api' // 测试接口域名
-  },
-  beta: {
     baseUrl: '//mall-admin.shanghai.works/manage-api/v1' // 测试接口域名
   },
   release: {
