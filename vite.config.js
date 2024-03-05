@@ -26,10 +26,9 @@ export default ({ mode }) => defineConfig({
   base: './',
   server: {
     proxy: {
-      '/api': {
-        target: 'http://mall-admin.shanghai.works/manage-api/v1', // 凡是遇到 /api 路径的请求，都映射到 target 属性
-        changeOrigin: true,
-        rewrite: path => path.replace(/^\/api/, '') // 重写 api 为 空，就是去掉它
+      '/manage-api/v1': {
+        target: 'https://mall-admin.shanghai.works', // 凡是遇到 /api 路径的请求，都映射到 target 属性
+        changeOrigin: true
       }
     }
   },
