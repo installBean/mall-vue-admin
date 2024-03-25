@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --mode development",
+    "test": "vite --mode testing",
     "build": "vite build --mode release"
   },
   "dependencies": {

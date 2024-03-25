@@ -1,3 +1,6 @@
+import config from '~/config'
+
+
 export function localGet (key) {
   const value = window.localStorage.getItem(key)
   try {
@@ -22,9 +25,9 @@ export function hasEmoji (str = '') {
 }
 
 // 单张图片上传
-export const uploadImgServer = 'http://mall-admin.shanghai.works/manage-api/v1/upload/file'
+export const uploadImgServer = config[import.meta.env.MODE].baseUrl + '/upload/file'
 // 多张图片上传
-export const uploadImgsServer = 'http://mall-admin.shanghai.works/manage-api/v1/upload/files'
+export const uploadImgsServer = config[import.meta.env.MODE].baseUrl + '/upload/files'
 
 export const pathMap = {
   login: '登录',
