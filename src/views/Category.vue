@@ -122,8 +122,8 @@ const getCategory = () => {
     params: {
       pageNumber: state.currentPage,
       pageSize: state.pageSize,
-      categoryLevel: level,
-      parentId: parent_id
+      categoryLevel: Number(level),
+      parentId: Number(parent_id)
     }
   }).then(res => {
     state.tableData = res.list

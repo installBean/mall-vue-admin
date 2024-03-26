@@ -1,6 +1,6 @@
 <template>
   <el-dialog
-    :title="state.type == 'add' ? '添加分类' : '修改分类'"
+    :title="type == 'add' ? '添加分类' : '修改分类'"
     v-model="state.visible"
     width="400px"
   >
@@ -78,8 +78,8 @@ const open = (id) => {
       name: '',
       rank: ''
     }
-    state.parentId = parent_id
-    state.categoryLevel = level
+    state.parentId = Number(parent_id)
+    state.categoryLevel = Number(level)
   }
 }
 // 关闭弹窗
@@ -106,8 +106,8 @@ const submitForm = () => {
         // 修改方法
         axios.put('/categories', {
           categoryId: state.id,
-          categoryLevel: state.categoryLevel,
-          parentId: state.categoryLevel,
+          // categoryLevel: state.categoryLevel,
+          // parentId: state.categoryLevel,
           categoryName: state.ruleForm.name,
           categoryRank: state.ruleForm.rank
         }).then(() => {
