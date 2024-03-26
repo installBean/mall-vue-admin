@@ -29,7 +29,13 @@ export default ({ mode }) => defineConfig({
       '/manage-api/v1': {
         target: 'https://mall-admin.shanghai.works', // 凡是遇到 /api 路径的请求，都映射到 target 属性
         changeOrigin: true
-      }
+      },
+      '/static': {
+        target: 'http://localhost:8888/', // local testing
+      },
+      // '/static': {
+      //   target: 'https://mall-admin.shanghai.works/', // dev
+      // }
     }
   },
   css: {
