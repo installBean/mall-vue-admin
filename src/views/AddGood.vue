@@ -78,9 +78,9 @@ const state = reactive({
   goodForm: {
     goodsName: '',
     goodsIntro: '',
-    originalPrice: '',
-    sellingPrice: '',
-    stockNum: '',
+    originalPrice: 0,
+    sellingPrice: 0,
+    stockNum: 0,
     goodsSellStatus: '0',
     goodsCoverImg: '',
     tag: ''
@@ -192,9 +192,9 @@ const submitAdd = () => {
         goodsIntro: state.goodForm.goodsIntro,
         goodsName: state.goodForm.goodsName,
         goodsSellStatus: state.goodForm.goodsSellStatus,
-        originalPrice: state.goodForm.originalPrice,
-        sellingPrice: state.goodForm.sellingPrice,
-        stockNum: state.goodForm.stockNum,
+        originalPrice: Number(state.goodForm.originalPrice),
+        sellingPrice: Number(state.goodForm.sellingPrice),
+        stockNum: Number(state.goodForm.stockNum),
         tag: state.goodForm.tag
       }
       console.log('params', params)

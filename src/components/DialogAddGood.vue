@@ -92,10 +92,10 @@ const close = () => {
 const submitForm = () => {
   formRef.value.validate((valid) => {
     if (valid) {
-      if (state.ruleForm.id < 0 || state.ruleForm.id > 200) {
-        ElMessage.error('商品编号不能小于 0 或大于 200')
-        return
-      }
+      // if (state.ruleForm.id < 0 || state.ruleForm.id > 200) {
+      //   ElMessage.error('商品编号不能小于 0 或大于 200')
+      //   return
+      // }
       if (props.type == 'add') {
         axios.post('/indexConfigs', {
           configType: props.configType || 3,

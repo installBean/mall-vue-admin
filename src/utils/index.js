@@ -31,7 +31,7 @@ export const uploadImgsServer = config[import.meta.env.MODE].baseUrl + '/upload/
 
 export const pathMap = {
   login: '登录',
-  introduce: '系统介绍',
+  // introduce: '系统介绍',
   dashboard: '大盘数据',
   add: '添加商品',
   swiper: '轮播图配置',

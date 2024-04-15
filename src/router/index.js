@@ -5,13 +5,13 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/introduce'
+      redirect: '/add'
     },
-    {
-      path: '/introduce',
-      name: 'introduce',
-      component: () => import(/* webpackChunkName: "introduce" */ '../views/Introduce.vue')
-    },
+    // {
+    //   path: '/introduce',
+    //   name: 'introduce',
+    //   component: () => import(/* webpackChunkName: "introduce" */ '../views/Introduce.vue')
+    // },
     {
       path: '/dashboard',
       name: 'dashboard',
